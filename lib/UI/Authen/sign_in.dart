@@ -45,17 +45,18 @@ class _SignInContainer extends State<SignInContainer> {
             ),
             MyTextField(textEditingController: emailController, hint: 'Username',),
             MyTextField(textEditingController: passwordController, hint: 'Password',),
-            MyButton(buttonTitle: 'Sign in', onButtonPressed: () {}),
+            MyButton(buttonTitle: 'Sign in', onButtonPressed: prepareToSignIn),
           ],
         ),
       ),
     );
   }
 
-  void prepareToSignin(){
+  void prepareToSignIn(){
     //check email format
     if (Utils().validateEmailFormatter(emailController.text)){
       //save user data
+
     }
   }
 
