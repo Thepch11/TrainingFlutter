@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../Utils/user_data_storage.dart';
+
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key, required String title});
 
@@ -36,6 +38,14 @@ class SplashScreenContainer extends StatefulWidget {
 }
 
 class _SplashScreenContainer extends State<SplashScreenContainer> {
+  final UserDataStorage userDataStorage = UserDataStorage();
+
+  @override
+  void initState() {
+    super.initState();
+    //check User logged in
+    isAlreadyLoggedIn();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,5 +84,21 @@ class _SplashScreenContainer extends State<SplashScreenContainer> {
       ),
     );
   }
-  
+
+
+  void isAlreadyLoggedIn() async {
+    // bool isUserLoggedIn = false;
+    bool isUserLoggedIn = await userDataStorage.isUserLoggedIn();
+    debugPrint('isAlreadyLoggedIn = $isUserLoggedIn');
+    if(isUserLoggedIn){
+      //go to Home page
+      //HomePage()
+    }
+    else {
+      //go to Sign in page
+      //SignIn()
+
+    }
+  }
+
 }

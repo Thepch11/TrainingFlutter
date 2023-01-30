@@ -1,5 +1,8 @@
+import 'package:autox_flutter_training/UI/Authen/sign_in.dart';
 import 'package:autox_flutter_training/UI/HomePage/home_page.dart';
 import 'package:flutter/material.dart';
+
+import 'UI/SplashScreen/splash_screen.dart';
 
 
 void main() {
@@ -26,8 +29,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      // home: const SplashScreen(title: 'Flutter Demo Home Page'),
-      home: const HomePage(),
+     // home: const SplashScreen(title: 'Flutter Demo Home Page'),
+     home: const SignIn(),
     );
   }
 }

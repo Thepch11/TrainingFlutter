@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class ServiceApi {
-  Future<String> getUniversityList(String url) async {
+  Future<String> getUniversityList() async {
     var response = await http.get(
         Uri.parse("http://universities.hipolabs.com/search?country=Thailand"),
         headers: {"Accept": "application/json"});

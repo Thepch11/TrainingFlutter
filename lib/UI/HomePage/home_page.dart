@@ -71,8 +71,7 @@ class _HomePageContainer extends State<HomePageContainer> {
               child: Container(
                 margin: const EdgeInsets.all(16),
                 child: FutureBuilder<String>(
-                  future: ServiceApi().getUniversityList(
-                      'http://universities.hipolabs.com/search?country=Thailand'),
+                  future: ServiceApi().getUniversityList(),
                   builder: (context, snapshot) {
                     // Decode the JSON
                     var resData = json.decode(snapshot.data.toString());
@@ -148,7 +147,7 @@ class _HomePageContainer extends State<HomePageContainer> {
             );
           }
    */
-  void getUniversityList() {
+  //void getUniversityList() {
     // FutureBuilder<String>(
     //   future: ServiceApi().getUniversityList(
     //       'http://universities.hipolabs.com/search?country=Thailand'),
@@ -163,7 +162,7 @@ class _HomePageContainer extends State<HomePageContainer> {
     //   builder:
     //       (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
     // Decode the JSON
-  }
+ // }
 
   bool showPinkStarIcon(int index) {
     //show Star icon if it's favorite or hide
